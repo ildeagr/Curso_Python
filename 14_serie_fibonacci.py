@@ -13,4 +13,3 @@ while numcurrent < int(num):
     numbef = temp
 
 print(resultado)
-
