@@ -46,4 +46,3 @@ del nombres[1:] #Elimina todos los elementos empezando desde el indicado
 print(nombres)
 del nombres[:] #Elimina la lista completa
 print(nombres)
-
