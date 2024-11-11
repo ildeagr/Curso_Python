@@ -7,6 +7,7 @@ if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
 else:
     print("Es una consonante")
 
+
 print("Comprobación de nombre completo")
 
 nombre =input("Introduce nombre: ").lower()
