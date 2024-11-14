@@ -1,0 +1,13 @@
+#Consulta para ver la jerarquía hacia abajo
+
+SELECT LEVEL, APELLIDO, EMP_NO, DIR
+FROM EMP
+CONNECT BY PRIOR EMP_NO=DIR
+START WITH APELIIDO='jimenez;
+
+#Consulta para ver la jerarquía hacia arriba se cambia de posicion la palabra PRIOR
+
+SELECT LEVEL, APELLIDO, EMP_NO, DIR
+FROM EMP
+CONNECT BY EMP_NO= PRIOR DIR
+START WITH APELIIDO='jimenez;

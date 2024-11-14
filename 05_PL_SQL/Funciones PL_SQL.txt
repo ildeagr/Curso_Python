@@ -1,0 +1,11 @@
+#Funciones
+#Siempre tienen uno o varias parametros de entrada y devuelve una única salida.
+#Está pensada para consultas.
+
+CREATE OR REPLACE FUNCTION NUMOFICIOS (P_OFICIO IN VARCHAR2) RETURN NUMBER
+AS
+V_EMPLEADOS NUMBER;
+BEGIN
+ SELECT COUNT(*) INTO V_EMPLEADOS FROM EMP WHERE OFICIO=P_OFICIO;
+ RETURN V_EMPLEADOS;
+END;
