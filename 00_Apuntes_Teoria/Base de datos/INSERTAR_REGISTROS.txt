@@ -1,0 +1,78 @@
+insert into hospital values(13,'provincial','o donell 50','964-4264',502);
+insert into hospital values(18,'general','Atocha s/n','595-3111',987);
+insert into hospital values(22,'la paz','castellana 1000','923-5411',412);
+insert into hospital values(45,'san carlos','ciudad universitaria','597-1500',845);
+
+insert into sala values(13,3,'cuidados intensivos',21);
+insert into sala values(13,6,'psiquiatria',67);
+insert into sala values(18,3,'cuidados intensivos',10);
+insert into sala values(18,4,'cardiologia',53);
+insert into sala values(22,1,'recuperacion',10);
+insert into sala values(22,6,'psiquiatria',118);
+insert into sala values(22,2,'maternidad',34);
+insert into sala values(45,4,'cardiologia',55);
+insert into sala values(45,1,'recuperacion',13);
+insert into sala values(45,2,'maternidad',24);
+
+insert into plantilla values(13,6,3754,'diaz b.','ENFERMERO','T',2262000);
+insert into plantilla values(13,6,3106,'hernandez j.','ENFERMERO','T',2755000);
+insert into plantilla values(18,4,6357,'karplus w.','INTERINO','T',3379000);
+insert into plantilla values(22,6,1009,'higueras d.','ENFERMERA','T',2005000);
+insert into plantilla values(22,6,8422,'bocina g.','ENFERMERO','M',1638000);
+insert into plantilla values(22,2,9901,'nuñez c.','INTERINO','M',2210000);
+insert into plantilla values(22,1,6065,'rivera g.','ENFERMERA','N',1626000);
+insert into plantilla values(22,1,7379,'carlos r.','ENFERMERA','T',2119000);
+insert into plantilla values(45,4,1280,'amigo r.','INTERINO','N',2210000);
+insert into plantilla values(45,1,8526,'frank h.','ENFERMERO','T',2522000);
+
+insert into doctor values(13,435,'Lopez A.','Cardiologia',350000);
+insert into doctor values(18,585,'Miller G.','Ginecologia',250000);
+insert into doctor values(18,982,'Cajal R','Cardiologia',290000);
+insert into doctor values(22,453,'Galo C.','Pediatria',250000);
+insert into doctor values(22,398,'Best K.','Urologia',150000);
+insert into doctor values(22,386,'Cabeza D.','Psiquiatria',125000);
+insert into doctor values(45,607,'Niqo P.','Pediatria',240000);
+insert into doctor values(45,522,'Adams C.','Neurologia',450000);
+
+INSERT INTO ENFERMO VALUES(10995,'Languia M.','Goya 20','16-May-56','M',280862482);
+INSERT INTO ENFERMO VALUES(18004,'Serrano V.','Alcala 12','21-May-60','F',284991452);
+INSERT INTO ENFERMO VALUES(14024,'Fernandez N..','Recoletos 5','23-JUL-67','F',321790059);
+INSERT INTO ENFERMO VALUES(36658,'Domin S.','Mayor 71','1-Enero-42','M',160657471);
+INSERT INTO ENFERMO VALUES(38702,'Neal R.','Orense 21','18-Jul-40','F',380010217);
+INSERT INTO ENFERMO VALUES(39217,'Cervantes M.','Perón 38','29-Feb-52','M',440294390);
+INSERT INTO ENFERMO VALUES(59076,'Miller G.','Lopez de Hoyos 2','16-Sep-45','F',311969044);
+INSERT INTO ENFERMO VALUES(63827,'Ruiz P.','Esquerdo 103','26-dic-80','M',200973253);
+INSERT INTO ENFERMO VALUES(64823,'Fraser A.','Soto 3','10-Jul-80','F',285201776);
+INSERT INTO ENFERMO VALUES(74835,'Benitez E.','Argentina 5','5-Oct-56','M',154811767);
+
+INSERT INTO OCUPACION VALUES(10995,13,3,1);
+INSERT INTO OCUPACION VALUES(18004,13,3,2);
+INSERT INTO OCUPACION VALUES(14024,13,3,3);
+INSERT INTO OCUPACION VALUES(36658,18,4,1);
+INSERT INTO OCUPACION VALUES(38702,18,4,2);
+INSERT INTO OCUPACION VALUES(39217,22,6,1);
+INSERT INTO OCUPACION VALUES(59076,22,6,2);
+INSERT INTO OCUPACION VALUES(63827,22,6,3);
+INSERT INTO OCUPACION VALUES(64823,22,2,1);
+
+insert into DEPT values(10,'CONTABILIDAD','SEVILLA');
+insert into DEPT values(20,'INVESTIGACIÓN','MADRID');
+insert into DEPT values(30,'VENTAS','BARCELONA');
+insert into DEPT values(40,'PRODUCCIÓN','BILBAO');
+
+insert into emp values('7839','rey','PRESIDENTE',null,'17-nov-95',650000,null,10);
+insert into emp values('7698','negro','DIRECTOR',7839,'01-may-95',370500,null,30);
+insert into emp values('7566','jimenez','DIRECTOR',7839,'02-abr-95',386750,null,20);
+insert into emp values('7782','cerezo','DIRECTOR',7839,'09-jun-95',318500,null,10);
+insert into emp values('7499','arroyo','VENDEDOR',7698,'20-feb-94',208000,39000,30);
+insert into emp values('7521','sala','VENDEDOR',7698,'22-feb-95',162500,65000,30);
+insert into emp values('7654','martin','VENDEDOR',7698,'29-jul-95',162500,182000,30);
+insert into emp values('7844','tovar','VENDEDOR',7698,'08-jul-95',195000,0,30);
+insert into emp values('7900','jimeno','EMPLEADO',7698,'03-dic-95',123500,null,30);
+insert into emp values('7902','fernandez','ANALISTA',7566,'03-dic-95',390000,null,20);
+insert into emp values('7788','gil','ANALISTA',7566,'09-nov-95',390000,null,20);
+insert into emp values('7369','sanchez','EMPLEADO',7902,'17-dic-94',104000,null,20);
+insert into emp values('7876','alonso','EMPLEADO',7788,'23-jul-95',143000,null,20);
+insert into emp values('7934','muñoz','EMPLEADO',7782,'23-ene-96',169000,null,10);
+
+

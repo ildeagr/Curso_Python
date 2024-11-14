@@ -1,0 +1,41 @@
+drop table emp;
+drop table dept;
+
+
+CREATE TABLE DEPT
+	(DEPT_NO NUMBER(2,0)
+		CONSTRAINT DEP_PRIMARY_KEY PRIMARY KEY,
+	DNOMBRE VARCHAR2(14),
+	LOC VARCHAR2(14));
+
+CREATE TABLE EMP
+	(EMP_NO NUMBER(4,0)
+		CONSTRAINT EMP_PRIMARY_KEY PRIMARY KEY,
+	APELLIDO VARCHAR2(10),
+	OFICIO VARCHAR2(10),
+	DIR NUMBER(4,0),
+	FECHA_ALT DATE,
+	SALARIO NUMBER(10,0),
+	COMISION NUMBER(10,0),
+	DEPT_NO NUMBER(2,0));
+
+
+insert into DEPT values(10,'CONTABILIDAD','SEVILLA');
+insert into DEPT values(20,'INVESTIGACIÓN','MADRID');
+insert into DEPT values(30,'VENTAS','BARCELONA');
+insert into DEPT values(40,'PRODUCCIÓN','BILBAO');
+
+insert into emp values('7839','rey','PRESIDENTE',null,'17-nov-95',650000,null,10);
+insert into emp values('7698','negro','DIRECTOR',7839,'01-may-95',370500,null,30);
+insert into emp values('7566','jimenez','DIRECTOR',7839,'02-abr-95',386750,null,20);
+insert into emp values('7782','cerezo','DIRECTOR',7839,'09-jun-95',318500,null,10);
+insert into emp values('7499','arroyo','VENDEDOR',7698,'20-feb-94',208000,39000,30);
+insert into emp values('7521','sala','VENDEDOR',7698,'22-feb-95',162500,65000,30);
+insert into emp values('7654','martin','VENDEDOR',7698,'29-jul-95',162500,182000,30);
+insert into emp values('7844','tovar','VENDEDOR',7698,'08-jul-95',195000,0,30);
+insert into emp values('7900','jimeno','EMPLEADO',7698,'03-dic-95',123500,null,30);
+insert into emp values('7902','fernandez','ANALISTA',7566,'03-dic-95',390000,null,20);
+insert into emp values('7788','gil','ANALISTA',7566,'09-nov-95',390000,null,20);
+insert into emp values('7369','sanchez','EMPLEADO',7902,'17-dic-94',104000,null,20);
+insert into emp values('7876','alonso','EMPLEADO',7788,'23-jul-95',143000,null,20);
+insert into emp values('7934','muñoz','EMPLEADO',7782,'23-ene-96',169000,null,10);
