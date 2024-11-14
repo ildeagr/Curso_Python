@@ -1,4 +1,5 @@
-#Procedimiento para insertar un dato en la tabla
+******** Procedimiento para insertar un dato en la tabla ********
+--------------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE INSERTARDEPT
 (NUMERO DEPT.DEPT_NO%TYPE, NOM DEPT.DNOMBRE%TYPE, LOCA DEPT.LOC%TYPE)
@@ -8,7 +9,8 @@ BEGIN
   COMMIT;
 END;
 
-#Procedimiento para borrar un dato
+******** Procedimiento para borrar un dato ********
+--------------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE DELETEEMP
 (NUMEMP EMP.EMP_NO%TYPE)
@@ -19,7 +21,8 @@ BEGIN
   COMMIT;
 END;
 
-#Procedimiento con un dato de salida y uno de entrada
+******** Procedimiento con un dato de salida y uno de entrada ********
+--------------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE GETSALARIO
 (NUMERO EMP.EMP_NO%TYPE, SAL OUT EMP.SALARIO%TYPE)
@@ -28,7 +31,8 @@ BEGIN
   SELECT SALARIO INTO SAL FROM EMP WHERE EMP_NO = NUMERO;
 END;
 
-#Procedimiento con dos datos de salida y uno de entrada
+******** Procedimiento con dos datos de salida y uno de entrada ********
+--------------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE GETINFODOCTOR
 (NUMERO doctor.DOCTOR_NO%TYPE, NOMBRE OUT doctor.APELLIDO%TYPE, ESPEC OUT doctor.ESPECIALIDAD%TYPE)
@@ -37,7 +41,8 @@ BEGIN
   SELECT APELLIDO, ESPECIALIDAD INTO NOMBRE,ESPEC FROM doctor WHERE DOCTOR_NO = NUMERO;
 END;
 
-#Comprobación del procedimiento cuando devuelve dos datos de salida
+******** Comprobación del procedimiento cuando devuelve dos datos de salida ********
+--------------------------------------------------------------------------------------
 
 DECLARE
  DATO1 VARCHAR2(20);

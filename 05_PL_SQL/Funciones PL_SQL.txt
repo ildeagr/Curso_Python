@@ -2,7 +2,9 @@
 #Siempre tienen uno o varias parametros de entrada y devuelve una única salida.
 #Está pensada para consultas.
 
-#Funcion donde devuelve el numero de empleados con un oficio concreto
+******** Funcion donde devuelve el numero de empleados con un oficio concreto ********
+--------------------------------------------------------------------------------------
+
 CREATE OR REPLACE FUNCTION NUMOFICIOS (P_OFICIO IN VARCHAR2) RETURN NUMBER
 AS
 V_EMPLEADOS NUMBER;
@@ -12,7 +14,8 @@ BEGIN
 END;
 
 
-#Bloque anónimo para probar la funcion
+******** Bloque anónimo para probar la funcion ********
+--------------------------------------------------------------------------------------
 
 DECLARE
 numero NUMBER;
@@ -21,12 +24,14 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE(numero);
 END;
 
-#De forma directa se realiza con un SELECT
+******** De forma directa se realiza con un SELECT ********
+--------------------------------------------------------------------------------------
 
 SELECT NUMOFICIOS('DIRECTOR') FROM DEPT;
 
 
-#Funcion donde pasamos el apellido de un doctor y nos devuelve su especialidad
+******** Funcion donde pasamos el apellido de un doctor y nos devuelve su especialidad ********
+--------------------------------------------------------------------------------------
 
 CREATE OR REPLACE FUNCTION TYPEESPEC (APEL IN VARCHAR2) RETURN VARCHAR2
 AS
@@ -36,7 +41,8 @@ BEGIN
  RETURN ESPEC;
 END;
 
-#Su bloque anónimo de pruebas
+******** Su bloque anónimo de pruebas ********
+--------------------------------------------------------------------------------------
 
 DECLARE
 ESPEC VARCHAR2(20);
