@@ -2,10 +2,45 @@
 #Siempre tienen uno o varias parametros de entrada y devuelve una única salida.
 #Está pensada para consultas.
 
+#Funcion donde devuelve el numero de empleados con un oficio concreto
 CREATE OR REPLACE FUNCTION NUMOFICIOS (P_OFICIO IN VARCHAR2) RETURN NUMBER
 AS
 V_EMPLEADOS NUMBER;
 BEGIN
  SELECT COUNT(*) INTO V_EMPLEADOS FROM EMP WHERE OFICIO=P_OFICIO;
  RETURN V_EMPLEADOS;
+END;
+
+
+#Bloque anónimo para probar la funcion
+
+DECLARE
+numero NUMBER;
+BEGIN
+  numero := NUMOFICIOS('DIRECTOR');
+  DBMS_OUTPUT.PUT_LINE(numero);
+END;
+
+#De forma directa se realiza con un SELECT
+
+SELECT NUMOFICIOS('DIRECTOR') FROM DEPT;
+
+
+#Funcion donde pasamos el apellido de un doctor y nos devuelve su especialidad
+
+CREATE OR REPLACE FUNCTION TYPEESPEC (APEL IN VARCHAR2) RETURN VARCHAR2
+AS
+ESPEC VARCHAR2(20);
+BEGIN
+ SELECT ESPECIALIDAD INTO ESPEC FROM doctor WHERE APELLIDO = APEL;
+ RETURN ESPEC;
+END;
+
+#Su bloque anónimo de pruebas
+
+DECLARE
+ESPEC VARCHAR2(20);
+BEGIN
+  ESPEC := TYPEESPEC('Miller G.');
+  DBMS_OUTPUT.PUT_LINE(ESPEC);
 END;
