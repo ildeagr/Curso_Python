@@ -1,4 +1,4 @@
-#Consultas incluyendo un parámetro
+#Consultas incluyendo dos parámetros
 
 import cx_Oracle
 
@@ -6,10 +6,12 @@ connection = cx_Oracle.connect("system", "pythonoracle", "localhost/XE")
 
 cursor = connection.cursor()
 try:
-    miOficio = input("Introduce Oficio Empleado:")
-    #Si ponemos UPPER o LOWER tanto en oficio como en el parámetro p1, el resultado es el mismo donde igual mayuscula que minuscula
-    consulta = ("SELECT apellido,oficio,salario FROM emp where UPPER(oficio)=UPPER(:p1)")
-    cursor.execute(consulta, (miOficio,))
+    valor1 = input("Introduce valor salario inferior:")
+    valor2 = input("Introduce valor salario superior:")
+    #consulta = ("SELECT apellido,oficio,salario FROM emp where UPPER(salario)>UPPER(:p1) AND UPPER(salario) < UPPER(:p2)")
+    consulta = "SELECT apellido,oficio,salario FROM emp where salario between :p1 and :p2"
+
+    cursor.execute(consulta, (valor1,valor2,))
      # Si en un único parámetro tenemos que poner ',' a continuación del valor de la variable
 
     for ape, ofi, sal in cursor:
