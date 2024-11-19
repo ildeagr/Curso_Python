@@ -15,3 +15,14 @@ except connection.Error as error:
     print("Error: ", error)
 cursor.close()
 connection.close()
+
+"""Procedimiento creado en Oracle"""
+
+"""
+CREATE OR REPLACE PROCEDURE RETURNLOC
+(PLOC OUT DEPT.LOC%TYPE, DP DEPT.DEPT_NO%TYPE)
+AS
+BEGIN
+  SELECT LOC INTO PLOC FROM DEPT WHERE DEPT_NO=DP;
+END;
+"""

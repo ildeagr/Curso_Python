@@ -20,3 +20,15 @@ except connection.Error as error:
     print("Error: ", error)
 cursor.close()
 connection.close()
+
+"""Procedimiento creado en Oracle"""
+
+"""
+CREATE OR REPLACE PROCEDURE INSERTARDEPT
+(DP DEPT.Dept_No%TYPE,NOMBRE DEPT.DNOMBRE%TYPE,LOCA DEPT.LOC%TYPE)
+AS
+BEGIN
+    INSERT INTO DEPT VALUES(DP,NOMBRE,LOCA);
+    COMMIT;
+END;
+"""
