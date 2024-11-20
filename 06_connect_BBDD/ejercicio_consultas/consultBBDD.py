@@ -66,10 +66,14 @@ class connection:
             return "Error: ", error
 
     def sqlselectdoctor(self):
+
         try:
             selectdoctor = "Select apellido, especialidad from doctor where doctor_no=:P1"
             self.cursor.execute(selectdoctor, (self.codedoctor,))
-            return self.cursor
+
+            for ape, espe in self.cursor:
+                self.result = self.result + (f"\nApellido: {ape} \nEspecialidad: {espe}")
+                return self.result
 
         except self.dataconnection.Error as error:
             return "Error: ", error

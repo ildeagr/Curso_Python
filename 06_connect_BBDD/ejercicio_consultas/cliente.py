@@ -3,9 +3,7 @@ import sys
 from consultBBDD import connection
 from validar_parametros import validated
 
-i=1
-
-while i!=0:
+while True:
     print("\n*** SELECCIONA UNA OPCIÓN ***")
     print("1 -  Alta doctor")
     print("2 -  Modificar salario doctor")
@@ -67,16 +65,14 @@ while i!=0:
         elif (option == 4):
             cod_doctor = input("\nEscriba el código doctor a consultar:")
 
-            validparam = (cod_doctor)
+            validparam = cod_doctor
             valido = validated()
             responsevalidate = valido.paramsnoemtpy(validparam)
 
             if not responsevalidate:
                 consult = connection("", cod_doctor, "", "", "")
-                response = consult.sqlselectdoctor()
+                valor = consult.sqlselectdoctor()
 
-                for ape, espe in response:
-                    valor = valor + (f"\nApellido: {ape} \nEspecialidad: {espe}")
             else:
                 valor = (f"Uno de los parámetros está vacio.")
 
@@ -92,7 +88,7 @@ while i!=0:
                 response = consult.sqlgroup()
 
                 for sumsal, avgsal,docto in response:
-                    valor = valor + (f"\nSumasalarial: {sumsal} \nMedia salarial: {avgsal} \nNúmero de doctores: {docto}")
+                    valor = valor + (f"Sumasalarial: {sumsal} \nMedia salarial: {avgsal} \nNúmero de doctores: {docto} \n")
 
                 print("\nDatos de grupo: \n__________________________")
 
@@ -104,4 +100,4 @@ while i!=0:
     else:
         valor = ("\nOpcion no disponible")
 
-    print ("\n",valor)
+    print (valor)

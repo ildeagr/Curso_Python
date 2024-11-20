@@ -3,8 +3,7 @@ import sys
 from consultBBDD import connection
 from valid_params import validated
 
-i=1
-while i!=0:
+while True:
     print("\n*** SELECCIONA UNA OPCIÓN ***")
     print("1 -  Alta hospital")
     print("2 -  Baja hospital")
@@ -14,8 +13,8 @@ while i!=0:
     option = int(input("\nEscriba su opción:"))
     valor =""
 
-    if (option > 0 and option < 5):
-        if (option == 1):
+    if option > 0 and option < 5:
+        if option == 1:
             codehosp = input("\nEscriba código del hospital:")
             namehosp = input("Escriba el nombre del hospital:")
             dir = input("Escriba la direccion:")
@@ -37,7 +36,7 @@ while i!=0:
                 valor = (f"Uno de los parámetros está vacio.")
 
 
-        elif (option == 2):
+        elif option == 2:
             codehosp = input("\nEscriba código del hospital:")
 
             validparam = (codehosp,)
@@ -51,7 +50,7 @@ while i!=0:
             else:
                 valor = (f"Uno de los parámetros está vacio.")
 
-        elif (option == 3):
+        elif option == 3:
             codehosp = input("\nEscriba código del hospital:")
             telf = input("Escriba el teléfono:")
 

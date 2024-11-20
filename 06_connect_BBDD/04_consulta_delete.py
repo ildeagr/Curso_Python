@@ -1,4 +1,4 @@
-#consulta de accion delete
+#Consulta de accion delete
 import cx_Oracle
 
 connection = cx_Oracle.connect("system", "pythonoracle", "localhost/XE")

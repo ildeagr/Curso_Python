@@ -6,7 +6,7 @@ class connection:
     dire = ""
     telf = ""
     numb = ""
-    rowc = ""
+    rowc = 0
 
     dataconnection = cx_Oracle.connect("system", "pythonoracle", "localhost/XE")
     cursor = dataconnection.cursor()
@@ -47,7 +47,7 @@ class connection:
             return "Error: ", error
 
     def statusregister(self):
-        if self.rowc != "0":
+        if self.rowc.getvalue() != 0:
             return "Registro Ok"
         else:
             return "Registro no Ok"
