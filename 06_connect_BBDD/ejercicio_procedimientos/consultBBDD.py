@@ -6,7 +6,7 @@ class connection:
     dire = ""
     telf = ""
     numb = ""
-    rowc = None
+    rowc = ""
 
     dataconnection = cx_Oracle.connect("system", "pythonoracle", "localhost/XE")
     cursor = dataconnection.cursor()
@@ -20,26 +20,18 @@ class connection:
 
     def procInsert(self):
         try:
+            self.rowc = self.cursor.var(cx_Oracle.NUMBER)
             self.cursor.callproc('INSERTHOSPITAL', (self.codehosp, self.namehosp, self.dire, self.telf, self.numb,self.rowc))
-
-            if self.rowc.getvalue() != 0:
-                return "Registro hospital insertado."
-
-            else:
-                return "Registro hospital no insertado."
+            return self.statusregister()
 
         except self.dataconnection.Error as error:
             return "Error: ", error
 
     def procDelete(self):
         try:
+            self.rowc = self.cursor.var(cx_Oracle.NUMBER)
             self.cursor.callproc('DELETEHOSPITAL', (self.codehosp,self.rowc))
-
-            if self.rowc.getvalue() != 0:
-                return "Registro hospital eliminado."
-
-            else:
-                return "Registro hospital no eliminado."
+            return self.statusregister()
 
         except self.dataconnection.Error as error:
             return "Error: ", error
@@ -47,13 +39,19 @@ class connection:
 
     def procUpdate(self):
         try:
+            self.rowc = self.cursor.var(cx_Oracle.NUMBER)
             self.cursor.callproc('UPDATETELF', (self.codehosp,self.telf,self.rowc))
-
-            if self.rowc.getvalue() != 0:
-                return "Registro hospital modificado."
-
-            else:
-                return "Registro hospital no modificado."
+            return self.statusregister()
 
         except self.dataconnection.Error as error:
             return "Error: ", error
+
+    def statusregister(self):
+        if self.rowc != "0":
+            return "Registro Ok"
+        else:
+            return "Registro no Ok"
+
+    def desconnect(self):
+        self.cursor.close()
+        self.dataconnection.close()

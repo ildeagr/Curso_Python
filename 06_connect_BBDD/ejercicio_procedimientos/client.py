@@ -4,7 +4,6 @@ from consultBBDD import connection
 from valid_params import validated
 
 i=1
-
 while i!=0:
     print("\n*** SELECCIONA UNA OPCIÓN ***")
     print("1 -  Alta hospital")
@@ -66,6 +65,10 @@ while i!=0:
 
             else:
                 valor = (f"Uno de los parámetros está vacio.")
+        else:
+            consult = connection("", "", "", "", "")
+            consult.desconnect()
+            sys.exit()
 
     else:
         valor = ("\nOpcion no disponible")
@@ -102,5 +105,4 @@ BEGIN
   ROWC:=SQL%ROWCOUNT;
   COMMIT;
 END;
-
 """
