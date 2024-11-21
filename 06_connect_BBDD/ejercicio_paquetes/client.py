@@ -23,10 +23,10 @@ while True:
             if not responsevalidate:
                 consult = connection(codeemp,"","")
                 response = consult.procSelect()
-                valor = (f"Salario: {response[0]}€ \nComisión: {response[1]}€")
+                valor = f"Salario: {response[0]}€ \nComisión: {response[1]}€"
 
             else:
-                valor = (f"Uno de los parámetros está vacio.")
+                valor = f"Uno de los parámetros está vacio."
 
 
         elif option == 2:
@@ -55,7 +55,7 @@ while True:
 
     print (valor)
 
-"""Paquete creado en BBDD"""
+""" Paquete creado en BBDD """
 """
 create or replace package tablaempsal
 as
