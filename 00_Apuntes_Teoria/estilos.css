@@ -1,0 +1,80 @@
+body
+            {
+                font-family: 'Roboto', sans-serif;
+                background-color: rgba(100,60,120,0.5);
+            }
+            
+            figcaption
+            {
+                font-size:10px;
+                text-align:center;
+            }  
+            hr
+            {
+                width: 200px;
+                text-align:center;
+                color:purple;
+            }
+            
+            mark
+            {
+                background-color:rgba(230,23,21,0.6);
+                color:white;
+            }
+             
+            img
+            {
+                border-radius:50px;
+                width:25%;
+            }
+            
+             li a
+            {
+                text-decoration:none;
+                color:rgba(60,20,40,0.6);
+            }
+            li a:hover
+            {
+                color:rgba(122,34,54,0.6);
+            }
+            
+            li a:visited
+            {
+                color:rgba(130,40,60,0.6);
+            }
+            
+            form
+            {
+                width:30%;
+            }
+            
+            fieldset
+            {
+                color:yellow;
+            }
+            
+            .center
+            {
+                text-align:center;
+            }
+            
+            .blank_space
+            {
+                height:500px;
+            }
+            
+            #botonera
+            {
+               text-align:center;
+            }
+            .lista
+            {
+                border-style:solid;
+                border:1px;
+            }
+            
+            .izquierda
+            {
+                text-align:left;
+            }
+
