@@ -1,0 +1,1 @@
+#Esta app es para generar un html y devolver esa página estática desde el controlador

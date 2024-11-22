@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color:blue;">Listado jugadores Real Madrid</h1>
+
+<table border="1">
+        <tr>
+            <th>NOMBRE</th>
+            <th>DEMARCACIÓN</th>
+            <th>NÚMERO CAMISETA</th>
+        </tr>
+        {% for jug in listado_jugadores%}
+
+            <tr>
+                <td>{{jug.Nombre}}</td>
+                <td>{{jug.Demarcacion}}</td>
+                <td>{{jug.Numero}}</td>
+            </tr>
+       {% endfor%}
+    </table>
+
+</body>
+</html>

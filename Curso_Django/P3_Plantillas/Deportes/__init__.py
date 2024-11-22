@@ -1,0 +1,1 @@
+#En esta app vamos a generar una variable para devolversela a la vista desde el controlador

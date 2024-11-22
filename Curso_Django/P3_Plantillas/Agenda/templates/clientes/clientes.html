@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Prueba de un datalist</h1>
+  <h3> Agenda de clientes:</h3>
+  <input type="text" name="txtname" list="lstclientes"/>
+
+      <datalist id='lstclientes'>
+        {% for clt in listado_clientes%}
+		<option value="{{clt.Nombre}} {{clt.Apellido}}"></option>
+        {%endfor%}
+	</datalist>
+
+</body>
+</html>
