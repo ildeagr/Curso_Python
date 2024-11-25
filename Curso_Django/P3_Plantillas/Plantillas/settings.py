@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'Bibliografia',
     'Deportes',
     'CV',
-    'Agenda'
+    'Agenda',
+    'AccesoDatos',
+    'Empleados'
 ]
 
 MIDDLEWARE = [

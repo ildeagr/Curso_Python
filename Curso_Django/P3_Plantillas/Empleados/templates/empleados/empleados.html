@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" href="{% static 'style/style.css'%}" as="style">
+</head>
+<body>
+<h1>Listado de empleados</h1>
+
+    <table class="tabla" border="1" style="width:75%">
+            <tr>
+                <th>NOMBRE</th>
+                <th>FECHA ALTA</th>
+            </tr>
+            {% for nom,fec in listado_empleados%}
+                <tr>
+                    <td>{{nom}}</td>
+                    <td>{{fec}}</td>
+                </tr>
+           {% endfor%}
+    </table>
+</body>
+</html>

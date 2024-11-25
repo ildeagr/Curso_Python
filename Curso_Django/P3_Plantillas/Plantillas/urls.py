@@ -22,5 +22,8 @@ urlpatterns = [
     path('biblio/', include('Bibliografia.urls')),
     path('deportes/', include('Deportes.urls')),
     path('infocv/', include('CV.urls')),
-    path('agenda/', include('Agenda.urls'))
+    path('agenda/', include('Agenda.urls')),
+    path('jugadores/', include('AccesoDatos.urls')),
+    path('empleados/', include('Empleados.urls')),
+
 ]

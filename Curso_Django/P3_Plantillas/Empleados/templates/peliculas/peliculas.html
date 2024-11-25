@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+<h1 >Listado de empleados</h1>
+
+    <table class="tabla" border="1" style="width:60%">
+            <tr>
+                <th>TITULO</th>
+                <th>CARÁTULA</th>
+            </tr>
+            {% for titulo, cara in listado_pelis %}
+            <tr>
+                <td>{{ titulo }}</td>
+                <td><img class="img" src="{% static 'image/'%}{{cara}}" ></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
