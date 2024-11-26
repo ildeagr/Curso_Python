@@ -17,3 +17,8 @@ def index2(request):
         'listado_pelis': cursor
     }
     return render(request, "peliculas/peliculas.html", contexto)
+
+def formulario(request):
+
+    return render(request, "formulario/formulario.html")
+

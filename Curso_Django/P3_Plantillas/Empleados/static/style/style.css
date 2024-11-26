@@ -26,10 +26,26 @@ h1 {
     width: min(90%, 120rem);
     margin: 0 auto;
     text-align: center;
-     background-color: rgba(12,43,202,1);
+    background-color: rgba(12,43,202,1);
 }
 
 img{
     width: 200px;
     height: auto;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem , 100%); /* Utilizar el valor más pequeño entre 60rem y el 100% */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+      <form class="formulari" action="solicutud" method="post">
+              Nombre: <input type="text" name="txtNombre"/><br/>
+              Edad: <input type="text" name="txtEdad"/><br/>
+              <input type="submit" value="Grabar"/><br/>
+      </form>
+</body>
+</html>

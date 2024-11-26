@@ -25,5 +25,5 @@ urlpatterns = [
     path('agenda/', include('Agenda.urls')),
     path('jugadores/', include('AccesoDatos.urls')),
     path('empleados/', include('Empleados.urls')),
-
+    path('oficios/', include('Post.urls'))
 ]

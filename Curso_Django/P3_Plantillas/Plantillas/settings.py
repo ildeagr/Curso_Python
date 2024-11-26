@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'CV',
     'Agenda',
     'AccesoDatos',
-    'Empleados'
+    'Empleados',
+    'Post'
 ]
 
 MIDDLEWARE = [
