@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+    <header>
+        <h1>Introduzca nuevo de doctor para eliminar:</h1>
+    </header>
+    <main>
+        <form class= "formu" method="post" action="delete">
+            {% csrf_token %}
+            Código doctor: <input type="text" name="txtdoc" /><br/><br/>
+            <input type="submit" value="Borrar Doctor">
+        </form>
+
+        <div style="background-color:yellow;float:left">
+            <a href="javascript:history.back()">VOLVER</a>
+        </div>
+    </main>
+    <footer class ="footer">
+        <p>Curso Python 2024</p>
+        <p>@Todos los derechos reservado. Ildefonso Albares.</p>
+    </footer>
+</body>
+</html>

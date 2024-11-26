@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+     <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+    <header>
+         <h1>Pulse la acción a realizar:</h1>
+    </header>
+    <main>
+        <section>
+            <form class="formu" method="post" action="peticion">
+                {% csrf_token %}
+                <fieldset>
+                    <input type="submit" value="Alta" name="submit"><br/><br/>
+                    <input type="submit" value="Baja" name="submit"><br/><br/>
+                    <input type="submit" value="Modificacion" name="submit"><br/><br/>
+                    <input type="submit" value="Consultar" name="submit"><br/><br/>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class ="footer">
+        <p>Curso Python 2024</p>
+        <p>@Todos los derechos reservado. Ildefonso Albares.</p>
+    </footer>
+</body>
+</html>

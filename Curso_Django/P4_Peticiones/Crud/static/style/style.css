@@ -1,0 +1,45 @@
+header{
+    background-color: rgba(246,186,100,1);
+    text-align: center;
+}
+body{
+    background-color: rgba(246,186,100,0.5);
+}
+
+.formu{
+    background-color: rgba(242,241,199,1);
+    width: min(60rem , 100%); /* Utilizar el valor más pequeño entre 60rem y el 100% */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.box{
+    width: auto;
+}
+
+input{
+      width: 200px;
+}
+
+table{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer{
+    background-color: rgba(246,186,100,1);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

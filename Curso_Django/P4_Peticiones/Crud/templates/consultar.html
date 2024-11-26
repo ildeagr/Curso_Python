@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+    <header>
+        <h1>LISTADO DOCTORES</h1>
+    </header>
+    <main>
+        <table border="1" style="width:75%">
+        <tr>
+            <th>CÓDIGO HOSPITAL</th>
+            <th>NÚMERO DOCTOR</th>
+            <th>NOMBRE DOCTOR</th>
+            <th>ESPECIALIDAD</th>
+            <th>SALARIO</th>
+        </tr>
+        {% for hos,doc,ape,espe,sal in listado_doctor%}
+            <tr>
+                <td>{{hos}}</td>
+                <td>{{doc}}</td>
+                <td>{{ape}}</td>
+                <td>{{espe}}</td>
+                <td>{{sal}}</td>
+            </tr>
+       {% endfor%}
+        </table>
+        <br/><br/><br/>
+
+        <div style="background-color:yellow;float:left">
+            <a href="javascript:history.back()">VOLVER</a>
+        </div>
+    </main>
+    <footer class ="footer">
+        <p>Curso Python 2024</p>
+        <p>@Todos los derechos reservado. Ildefonso Albares.</p>
+    </footer>
+
+</body>
+</html>

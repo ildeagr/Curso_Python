@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/normalize.css'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" >
+</head>
+<body>
+    <header>
+        <h1>Introduzca datos del nuevo doctor:</h1>
+    </header>
+    <main>
+        <form class="formu" method="post" action="insert">
+            {% csrf_token %}
+            <fieldset>
+                <section>
+                    <div class="box">
+                        <label>Código hospital:</label>
+                        <input type="text" name="txthosp" /><br/><br/>
+                    </div>
+                    <div class="box">
+                        <label>Código doctor:</label>
+                         <input type="text" name="txtdoc" /><br/><br/>
+                    </div>
+                    <div class="box">
+                        <label>Apellido doctor: </label>
+                        <input type="text" name="txtape" /><br/><br/>
+                    </div>
+                    <div class="box">
+                        <label>Especialidad: </label>
+                        <input type="text" name="txtespe" /><br/><br/>
+                    </div>
+                    <div class="box">
+                        <label>Salario:</label>
+                         <input type="text" name="txtsal" /><br/><br/>
+                    </div>
+                    <div class="box">
+                        <input type="submit" value="Insertar Datos">
+                    </div>
+                </section>
+            </fieldset>
+        </form>
+    </main>
+    <div style="background-color:yellow;float:left">
+        <a href="javascript:history.back()">VOLVER</a>
+    </div>
+    <footer class ="footer">
+        <p>Curso Python 2024</p>
+        <p>@Todos los derechos reservado. Ildefonso Albares.</p>
+    </footer>
+</body>
+</html>
