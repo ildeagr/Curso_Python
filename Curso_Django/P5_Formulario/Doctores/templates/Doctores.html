@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/style_ficha.css'%}">
+</head>
+<body>
+    <header>
+       <h1>Doctores del Hospiral</h1>
+    </header>
+    <main>
+        <section>
+              <form class="formulario" action="select" method="post">
+                  {% csrf_token %}
+                    <div class="campo">
+                        Provincial <input type="checkbox" value="'13'" name="chkhosp">
+                        General <input type="checkbox" value="'18'" name="chkhosp">
+                        La paz <input type="checkbox" value="'22'" name="chkhosp">
+                        San Carlos <input type="checkbox" value="'45'" name="chkhosp">
+                        Octubre12 <input type="checkbox" value="'23'" name="chkhosp">
+                    </div>
+
+                    <div class="campo">
+                        <input class="form_submit"  type="submit" value="Aceptar" name="Mostrar Doctores">
+                    </div>
+              </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/style_ficha.css'%}">
+</head>
+<body>
+      <header>
+        <h1>{{dato}}</h1>
+      </header>
+      <main>
+        <a href="{% url 'formulario' %}">Volver a formulario</a>
+      </main>
+</body>
+</html>

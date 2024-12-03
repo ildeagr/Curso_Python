@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/style_ficha.css'%}">
+</head>
+<body>
+    <header>
+       <h1>Ficha cliente</h1>
+    </header>
+    <main>
+        <section>
+              <form class="formulario" action="insert" method="post">
+                  {% csrf_token %}
+                    <div class="campo">
+                        <label>Nombre:</label>
+                        <input class="form_text" type="text" name="txtnombre">
+                    </div>
+                    <div class="campo">
+                        <label>Primer apellido :</label>
+                        <input class="form_text" type="text" name="txtape1">
+                        <label class="sa">Segundo apellido:</label>
+                        <input class="form_text" type="text" name="txtape2">
+                    </div>
+                    <div class="campo">
+                        <label>Direccion:</label>
+                        <input class="form_text" type="text" name="txdirec">
+                    </div>
+                    <div class="campo">
+                        <label>Ciudad:</label>
+                        <select name="cmbCiudad">
+                            <option value="Madrid">Madrid</option>
+                            <option value="Barcelona">Bcn</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Bilbao">Bilbao</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label>Sexo:</label>
+                        Mujer <input type="radio" value="M" name="rdbsexo">
+                        Hombre <input type="radio" value="H" name="rdbsexo">
+                    </div>
+                    <div class="campo">
+                        <label>Sistema operativo:</label>
+                        Windows XP <input type="checkbox" value="Windows xp" name="chksys">
+                        Linux <input type="checkbox" value="Linux" name="chksys">
+                        W 2000 <input type="checkbox" value="w 2000" name="chksys">
+                    </div>
+                    <div class="campo">
+                        <label>Observaciones:</label>
+                    </div>
+                    <div class="campo">
+                        <textarea name="txtobservaciones" cols="40" rows="5"></textarea>
+                    </div>
+                    <div class="campo">
+                        <input class="form_submit"  type="submit" value="Aceptar" name="aceptar">
+                    </div>
+              </form>
+        </section>
+    </main>
+</body>
+</html>

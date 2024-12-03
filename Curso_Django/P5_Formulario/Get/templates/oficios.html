@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/style_ficha.css'%}">
+</head>
+<body>
+    <header>
+       <h1>Oficios empleados</h1>
+    </header>
+    <main>
+        <section>
+          <div class="campo">
+            <a class="campo_ofi" href="empleados?oficio=presidente">Presidente</a>
+            <a class="campo_ofi" href="empleados?oficio=vendedor">Vendedor</a>
+            <a class="campo_ofi" href="empleados?oficio=analista">Analista</a>
+            <a class="campo_ofi" href="empleados?oficio=director">Director</a>
+            <a class="campo_ofi" href="empleados?oficio=empleado">Empleado</a>
+          </div>
+        </section>
+    </main>
+</body>
+</html>
