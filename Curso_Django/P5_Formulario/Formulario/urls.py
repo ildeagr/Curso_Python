@@ -22,4 +22,5 @@ urlpatterns = [
     path('formulario/', include('Ficha1.urls')),
     path('doctores/', include('Doctores.urls')),
     path('oficios/', include('Get.urls')),
+    path('consulta/', include('Multisolicitudes.urls')),
 ]

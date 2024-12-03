@@ -13,7 +13,21 @@
         <h1>{{dato}}</h1>
       </header>
       <main>
-        <a href="{% url 'formulario' %}">Volver a formulario</a>
+          <table border="1" style="width:100%">
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>ESPECIALIDAD</th>
+                    <th>SALARIO</th>
+                </tr>
+                {% for nom,espec,sal in lista %}
+                    <tr>
+                        <td>{{nom}}</td>
+                        <td>{{espec}}</td>
+                        <td>{{sal}}</td>
+                    </tr>
+               {% endfor %}
+          </table>
+          <a href="formulario">Volver a formulario</a>
       </main>
 </body>
 </html>

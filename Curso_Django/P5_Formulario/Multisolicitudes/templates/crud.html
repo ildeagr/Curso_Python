@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/crud.css'%}">
+</head>
+<body>
+  <header>
+    <h1> Departamentos </h1>
+  </header>
+  <main>
+        <form id="myform" method="post" action="peticion">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="campo">
+                Número:
+                <input id="numero" type="text" name="numero"/>
+            </div >
+            <div class="campo">
+                Nombre:
+                <input id="nombre" type="text" name="nombre"/>
+            </div>
+            <div class="campo">
+                Localidad:
+                <input id="localidad" type="text" name="localidad"/>
+            </div>
+            <div class="campo">
+                <button class="campo_boton" id="insert" type="submit" name="operacion" value="Insertar">Inserta</button>
+                <button class="campo_boton" id="update" type="submit" name="operacion" value="Modificar">Modificar</button>
+                <button class="campo_boton" id="delete" type="submit" name="operacion" value="Eliminar">Eliminar</button>
+            </div>
+        </form>
+        {% if resultado %}
+            <h2 style='color:red'>La solicitud de {{operacion}} ha sido {{resultado}} </H2>
+            <table border="1" style="width:100%">
+                <tr>
+                    <th>NÚMERO DEPARTAMENTO</th>
+                    <th>FUNCIÓN</th>
+                    <th>LOCALIZACIÓN</th>
+                </tr>
+                {% for num,nom,loc in respuesta %}
+                    <tr>
+                        <td>{{num}}</td>
+                        <td>{{nom}}</td>
+                        <td>{{loc}}</td>
+                    </tr>
+               {% endfor %}
+          </table>
+        {% endif %}
+  </main>
+    <script src="{% static 'js/validacion.js'%}"></script>
+</body>
+</html>

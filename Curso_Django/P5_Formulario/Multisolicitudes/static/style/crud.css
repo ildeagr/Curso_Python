@@ -1,0 +1,57 @@
+:root{
+    /*Fuente de texto*/
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    /*Paleta de colores*/
+    /*1C7C54*/
+    --darkspringgreen: rgba(28,124,84,1);
+    /*73E2A7*/
+    --celadon: rgba(115,226,167,1);
+    /*DEF4C6*/
+    --teagreen: rgba(222,244,198,1);
+    /*1B512D*/
+    --calPolygreen: rgba(27,81,45,1);
+    /*B1CF5F*/
+    --yellowgreen: rgba(177,207,95,1);
+
+    --blanco: rgba(255,255,255,1);
+    --negro: rgba(0,0,0,1);
+    --blue: rgba(135,206,250,1);
+
+}
+
+
+header{
+    background-color: var(--darkspringgreen);
+    text-align: center;
+    font-family: var(--fuenteHeading);
+}
+
+body{
+    background-color: var(--teagreen);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+main{
+    min-height: 100%;
+    flex: 1; /*Hace que main ocupe el espacio restante dentro del display flex que tiene body*/
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem 0rem 5rem;
+}
+
+.campo{
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+.campo_boton{
+    margin: 0rem 0rem 0rem 1rem;
+}

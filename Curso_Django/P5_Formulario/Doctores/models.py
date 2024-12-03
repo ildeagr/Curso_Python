@@ -7,8 +7,8 @@ class Peticion:
     def select(self,datos):
         cursor = self.connection.cursor()
         try:
-            consulta = "SELECT apellido, especialidad, salario FROM doctor WHERE hospital_cod IN(:P1)"
-            cursor.execute(consulta,(datos,))
+            consulta = "SELECT apellido, especialidad, salario FROM doctor WHERE hospital_cod IN ("+datos+")"
+            cursor.execute(consulta)
 
         except self.connection.Error as error:
             print("Error: ", error)
