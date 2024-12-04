@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/crud.css'%}">
+</head>
+<body>
+  <header>
+    <h1> Personajes starwars </h1>
+  </header>
+  <main>
+      <table class="table" border="1" style="width:90%">
+          <tr>
+              <th>Personaje</th>
+              <th>Altura</th>
+              <th>Peso</th>
+          </tr>
+          {% for personaje in datos %}
+          <tr>
+              <td>{{personaje.name}}</td>
+              <td>{{personaje.height}}</td>
+              <td>{{personaje.mass}}</td>
+          </tr>
+          {% endfor %}
+      </table>
+  </main>
+</body>
+</html>
