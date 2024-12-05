@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/series.css'%}">
+</head>
+<body>
+  <header>
+      <h1>Series de TV</h1>
+  </header>
+  <main>
+      <div>
+          <form class="formulario" action="insertper" method="post">
+              {% csrf_token %}
+              <div class="campo">
+                  <label>Nombre personaje:</label>
+                  <input class="form_text" type="text" name="txtper">
+              </div>
+              <div class="campo">
+                  <label>Imagen:</label>
+                  <input class="form_text" type="text" name="txtimg">
+              </div>
+              <div class="campo">
+                  <label>Serie:</label>
+                  <select class="button" name="series">
+                      <option value="#">Series</option>
+                      {% for i in datos %}
+                      <option value="{{i.idSerie}}">{{i.nombre}}</option>
+                      {% endfor %}
+                  </select>
+              </div>
+              <input class="button" type="submit" value="Insertar personaje">
+          </form>
+        <button class="button" onclick="history.back()">Volver</button>
+      </div>
+  </main>
+</body>
+</html>

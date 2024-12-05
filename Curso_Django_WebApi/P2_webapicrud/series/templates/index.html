@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/series.css'%}">
+
+</head>
+<body>
+  <header>
+      <h1>Series de TV</h1>
+  </header>
+  <main>
+          <form class="nav_option">
+              <a class="button" href="indexserie" data-form="form1">Nueva Serie</a>
+              <a class="button" href="indexupdateserie" data-form="form2">Modificar Serie</a>
+              <a class="button" href="indexper" data-form="form1">Nuevo personaje</a>
+              <form class="formulario" action="selectserie" method="post">
+                  {% csrf_token %}
+                  <select class="button" name="series" onchange="this.form.submit()">
+                      <option value="#">Series</option>
+                      {% for i in datos %}
+                      <option value="{{i.idSerie}}">{{i.nombre}}</option>
+                      {% endfor %}
+                  </select>
+              </form>
+          </form>
+      </div>
+  </main>
+</body>
+</html>

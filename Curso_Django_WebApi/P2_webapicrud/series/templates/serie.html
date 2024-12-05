@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'style/series.css'%}">
+</head>
+<body>
+  <header>
+      <h1>Series de TV</h1>
+  </header>
+  <main>
+      <div class="tablon">
+            <img src="{{datos.imagen}}" width="400" height="300">
+            <h2>Título: {{datos.nombre}}</h2>
+            <h2>Puntuacion: {{datos.puntuacion}}</h2>
+            <h2>Año: {{datos.anyo}}</h2>
+      </div>
+      <a class="button_personaje" href="selectper" data-form="form2">Mostrar Personajes</a>
+
+      <button class="button" onclick="history.back()">Volver</button>
+  </main>
+</body>
+</html>
