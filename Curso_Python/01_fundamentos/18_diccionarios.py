@@ -31,6 +31,9 @@ for valor in provincias.values():
 print("\n*** Mostrar número con len ***")
 print("El número de provincias es:", len(provincias))
 
+# Modificamos el un elemento
+mi_diccionario[91] = "Almeria"
+
 print("\n*** Insertar nuevos valores .setdefault ***")
 #Si la clave existiera no la inserta
 provincias.setdefault(925,"Toledo")
